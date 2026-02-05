@@ -61,9 +61,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  /* Slightly more industrial than pill */
-  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  /* Rounded Pill Shape */
+  padding: 0.875rem 2.5rem;
   font-size: 0.95rem;
   font-weight: 600;
   background: var(--lime);
@@ -82,9 +82,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 0.875rem 2rem;
+  padding: 0.875rem 2.5rem;
   font-size: 0.95rem;
   font-weight: 600;
   color: white;
