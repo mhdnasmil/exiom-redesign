@@ -16,26 +16,42 @@
     <div class="glow-bg top-[-200px] left-[-200px]"></div>
     <div class="glow-bg bottom-0 right-0"></div>
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass top-0">
+    <!-- Navbar - Premium Full Width Glass -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
         <div class="container-restricted h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight flex items-center gap-3 group">
-                <div
-                    class="w-8 h-8 bg-[#a4e639] rounded-sm flex items-center justify-center group-hover:rotate-90 transition-transform duration-500">
-                    <i data-lucide="box" class="text-black w-4 h-4"></i>
-                </div>
-                <div class="text-white">EXIOM<span class="text-[#a4e639]">PLUS</span></div>
+
+            <a href="#" class="flex items-center group relative z-10">
+                <img src="assets/logo.webp" alt="Exiom Plus Logo"
+                    class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
             </a>
 
-            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#products" class="hover:text-white transition-colors">Products</a>
-                <a href="#process" class="hover:text-white transition-colors">How It Works</a>
-                <a href="#industries" class="hover:text-white transition-colors">Industries</a>
+            <div class="hidden lg:flex items-center gap-10 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors relative group py-2">
+                    About
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#a4e639] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#products" class="hover:text-white transition-colors relative group py-2">
+                    Products
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#a4e639] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#process" class="hover:text-white transition-colors relative group py-2">
+                    How It Works
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#a4e639] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#industries" class="hover:text-white transition-colors relative group py-2">
+                    Industries
+                    <span
+                        class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#a4e639] transition-all group-hover:w-full"></span>
+                </a>
             </div>
 
-            <div class="flex items-center gap-4">
-                <a href="#contact" class="btn-primary text-xs tracking-widest">Request Quote</a>
+            <div class="flex items-center gap-4 z-10">
+                <a href="#contact" class="btn-primary text-xs tracking-widest shadow-lg shadow-[#a4e639]/10">Request
+                    Quote</a>
             </div>
         </div>
     </nav>
@@ -146,86 +162,109 @@
             class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#a4e639] opacity-[0.03] blur-[120px] rounded-full pointer-events-none">
         </div>
 
-        <div class="container-restricted relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div class="container-restricted relative z-10 text-center">
 
-                <!-- Left: Content -->
-                <div class="text-left">
-                    <div class="inline-flex items-center gap-2 mb-6">
-                        <span class="w-12 h-[1px] bg-[#a4e639]"></span>
-                        <h4 class="text-[#a4e639] font-bold tracking-widest uppercase text-xs">Who We Are</h4>
-                    </div>
-
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white leading-tight">
-                        Your Trusted <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Execution
-                            Partner</span>
-                    </h2>
-
-                    <div class="text-gray-400 text-base leading-relaxed space-y-6">
-                        <p>
-                            <strong class="text-white">Exiom Plus</strong>, headquartered in the UAE, is a global
-                            supplier of MEP equipment, Electrical systems, and Industrial Automation solutions.
-                        </p>
-                        <p>
-                            We specialize in sourcing <span class="text-[#a4e639]">Rare, Obsolete, and Non-standard
-                                components</span> From World-leading brands - All with Fast lead times and competitive
-                            Pricing.
-                        </p>
-                        <p>
-                            Backed by 24/7 operations and a robust global network, Exiom Plus goes Beyond traditional
-                            supply - we are your Execution Partner, delivering smart Procurement, Speed, and Seamless
-                            Service, On time, Every time.
-                        </p>
-                    </div>
-
-                    <div class="mt-10">
-                        <a href="#contact" class="btn-primary">
-                            Partner With Us
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: Mission & Vision Stack -->
-                <div class="space-y-6">
-                    <!-- Mission -->
-                    <div
-                        class="glass-card p-8 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <i data-lucide="target" class="w-24 h-24 text-[#a4e639]"></i>
-                        </div>
-                        <div class="relative z-10">
-                            <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                <span class="w-2 h-8 bg-[#a4e639] rounded-full"></span>
-                                Mission
-                            </h3>
-                            <p class="text-gray-400 italic leading-relaxed">
-                                "To Empower industries across the GCC and beyond by delivering reliable, Innovative, and
-                                affordable industrial Supply solutions through strong global Partnerships"
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Vision -->
-                    <div
-                        class="glass-card p-8 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors relative overflow-hidden group">
-                        <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <i data-lucide="eye" class="w-24 h-24 text-[#a4e639]"></i>
-                        </div>
-                        <div class="relative z-10">
-                            <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                <span class="w-2 h-8 bg-[#a4e639] rounded-full"></span>
-                                Vision
-                            </h3>
-                            <p class="text-gray-400 italic leading-relaxed">
-                                "To become the most trusted and Efficient industrial supply partner in The region,
-                                recognized for quality, Speed, and Customer satisfaction"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="inline-flex items-center gap-2 mb-6 justify-center">
+                <span class="w-12 h-[1px] bg-[#a4e639]"></span>
+                <h4 class="text-[#a4e639] font-bold tracking-widest uppercase text-xs">Who We Are</h4>
+                <span class="w-12 h-[1px] bg-[#a4e639]"></span>
             </div>
+
+            <h2 class="text-4xl md:text-5xl font-bold mb-16 text-white leading-tight">
+                Your Trusted <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Execution
+                    Partner</span>
+            </h2>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#a4e639]/10 flex items-center justify-center mb-6 border border-[#a4e639]/20">
+                        <i data-lucide="search" class="text-[#a4e639] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">Specialized Sourcing</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                        We locate <span class="text-white">Rare, Obsolete, and Non-standard</span> components from
+                        world-leading brands.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#a4e639]/10 flex items-center justify-center mb-6 border border-[#a4e639]/20">
+                        <i data-lucide="globe" class="text-[#a4e639] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">Global Reach</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                        Headquartered in UAE with a robust global network, ensuring <span class="text-white">fast lead
+                            times</span>.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-[#a4e639]/10 flex items-center justify-center mb-6 border border-[#a4e639]/20">
+                        <i data-lucide="clock" class="text-[#a4e639] w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">24/7 Execution</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+                        Delivering smart procurement and seamless service, <span class="text-white">On time, Every
+                            time</span>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mission & Vision Grid -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Mission -->
+                <div
+                    class="glass-card p-10 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors relative overflow-hidden group text-center">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-[#a4e639]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/5 group-hover:border-[#a4e639] transition-colors">
+                            <i data-lucide="target" class="text-[#a4e639] w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">OUR MISSION</h3>
+                        <p class="text-gray-400 italic leading-relaxed">
+                            "To Empower industries across the GCC and beyond by delivering reliable, Innovative, and
+                            affordable industrial Supply solutions through strong global Partnerships"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vision -->
+                <div
+                    class="glass-card p-10 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] transition-colors relative overflow-hidden group text-center">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-[#a4e639]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/5 group-hover:border-[#a4e639] transition-colors">
+                            <i data-lucide="eye" class="text-[#a4e639] w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">OUR VISION</h3>
+                        <p class="text-gray-400 italic leading-relaxed">
+                            "To become the most trusted and Efficient industrial supply partner in The region,
+                            recognized for quality, Speed, and Customer satisfaction"
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16">
+                <a href="#contact" class="btn-primary">
+                    Partner With Us
+                </a>
+            </div>
+
         </div>
     </section>
 
