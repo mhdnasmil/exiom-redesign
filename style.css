@@ -50,8 +50,7 @@ body {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  height: 100%;
-  /* Ensure full height in grids */
+  /* height: 100% removed to allow content-based height */
   display: flex;
   flex-direction: column;
 }
@@ -216,17 +215,18 @@ body {
   width: 100%;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 0.875rem 1.25rem;
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 0.9rem;
 }
 
 .input-field:focus {
   outline: none;
   border-color: var(--lime);
-  background: rgba(164, 230, 57, 0.05);
+  background: rgba(164, 230, 57, 0.02);
+  box-shadow: 0 0 20px rgba(164, 230, 57, 0.05);
 }
 
 /* Utility */
