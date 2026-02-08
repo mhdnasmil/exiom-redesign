@@ -77,6 +77,26 @@ body {
   box-shadow: 0 4px 20px var(--lime-glow);
 }
 
+.btn-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--lime);
+  color: #000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.btn-nav:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px var(--lime-glow);
+}
+
 .btn-outline {
   display: inline-flex;
   align-items: center;
@@ -129,6 +149,27 @@ body {
 .numbered-card:hover::before {
   color: rgba(164, 230, 57, 0.1);
   transform: translateY(-5px);
+}
+
+/* Card Background Images */
+.card-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.1;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.card-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.numbered-card:hover .card-bg-image {
+  opacity: 0.2;
+  transform: scale(1.1);
 }
 
 /* Marquee */
@@ -227,6 +268,50 @@ body {
   border-color: var(--lime);
   background: rgba(164, 230, 57, 0.02);
   box-shadow: 0 0 20px rgba(164, 230, 57, 0.05);
+}
+
+/* Scroll Reveal Animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-100 {
+  transition-delay: 100ms;
+}
+
+.reveal-delay-200 {
+  transition-delay: 200ms;
+}
+
+.reveal-delay-300 {
+  transition-delay: 300ms;
+}
+
+.reveal-delay-400 {
+  transition-delay: 400ms;
+}
+
+.reveal-delay-500 {
+  transition-delay: 500ms;
+}
+
+@keyframes fadeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Utility */
