@@ -59,11 +59,44 @@ Contact: nasmil2005@gmail.com
             </div>
 
             <div class="flex items-center gap-4 z-10">
-                <a href="#contact" class="btn-nav shadow-lg shadow-[#a4e639]/10">Request
+                <a href="#contact"
+                    class="hidden sm:inline-flex btn-primary text-xs tracking-widest shadow-lg shadow-[#a4e639]/10">Request
                     Quote</a>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn"
+                    class="lg:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white hover:border-[#a4e639]/50 transition-all">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 z-[100] bg-black pointer-events-none opacity-0 transition-all duration-300">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#a4e639]/10 via-transparent to-black opacity-30"></div>
+        <div class="absolute top-6 right-6">
+            <button id="mobile-menu-close"
+                class="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-all">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="h-full flex flex-col items-center justify-center gap-8 relative z-10 p-10">
+            <a href="#"
+                class="mobile-nav-link text-3xl font-bold text-white hover:text-[#a4e639] transition-all">Home</a>
+            <a href="#about"
+                class="mobile-nav-link text-3xl font-bold text-white hover:text-[#a4e639] transition-all">About</a>
+            <a href="#products"
+                class="mobile-nav-link text-3xl font-bold text-white hover:text-[#a4e639] transition-all">Products</a>
+            <a href="#process"
+                class="mobile-nav-link text-3xl font-bold text-white hover:text-[#a4e639] transition-all">How It
+                Works</a>
+            <a href="#industries"
+                class="mobile-nav-link text-3xl font-bold text-white hover:text-[#a4e639] transition-all">Industries</a>
+            <a href="#contact" class="mobile-nav-link text-3xl font-bold text-[#a4e639] transition-all pt-4">Contact
+                Us</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="min-h-screen flex flex-col justify-center relative overflow-hidden">
@@ -760,7 +793,7 @@ Contact: nasmil2005@gmail.com
                             </div>
                             <div>
                                 <h4 class="text-white font-bold text-sm mb-0.5">Direct Line</h4>
-                                <p class="text-gray-500 text-[11px]">+971 52 452 3476</p>
+                                <p class="text-gray-500 text-[11px]">+971 55 489 2151</p>
                             </div>
                         </div>
                     </div>
@@ -774,7 +807,7 @@ Contact: nasmil2005@gmail.com
                             </div>
                             <div>
                                 <h4 class="text-white font-bold text-sm mb-0.5">Inquiries</h4>
-                                <p class="text-gray-500 text-[11px]">info@exiomplus.com</p>
+                                <p class="text-gray-500 text-[11px]">sales@exiomplus.com</p>
                             </div>
                         </div>
                     </div>
@@ -984,34 +1017,24 @@ Contact: nasmil2005@gmail.com
                         <div class="flex gap-3 items-center">
                             <i data-lucide="phone" class="text-[#a4e639] w-5 h-5 shrink-0"></i>
                             <span class="text-white hover:text-[#a4e639] transition-colors cursor-pointer">+971
-                                52
-                                452
-                                3476</span>
+                                55
+                                489
+                                2151</span>
                         </div>
                         <div class="flex gap-3 items-center">
                             <i data-lucide="mail" class="text-[#a4e639] w-5 h-5 shrink-0"></i>
                             <span
                                 class="text-white hover:text-[#a4e639] transition-colors cursor-pointer">info@exiomplus.com</span>
                         </div>
-                        <div class="flex gap-3 items-center">
-                            <i data-lucide="globe" class="text-[#a4e639] w-5 h-5 shrink-0"></i>
-                            <span
-                                class="text-white hover:text-[#a4e639] transition-colors cursor-pointer">www.exiomplus.com</span>
+                        <p class="text-gray-600 text-xs">&copy; 2026 Exiom Plus FZ LLC. All rights reserved.</p>
+                        <div class="flex gap-8 text-xs text-gray-600 font-medium">
+                            <span class="text-gray-500">Developed by
+                                <a href="https://www.linkedin.com/in/mhdnasmil" target="_blank"
+                                    class="text-gray-400 hover:text-[#a4e639] transition-colors underline underline-offset-4 decoration-white/10 hover:decoration-[#a4e639]">Nasmil</a>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-600 text-xs">&copy; 2026 Exiom Plus FZ LLC. All rights reserved.</p>
-                <div class="flex gap-8 text-xs text-gray-600 font-medium">
-                    <span class="text-gray-500">Developed by
-                        <a href="https://www.linkedin.com/in/mhdnasmil" target="_blank"
-                            class="text-gray-400 hover:text-[#a4e639] transition-colors underline underline-offset-4 decoration-white/10 hover:decoration-[#a4e639]">Nasmil</a>
-                    </span>
-                </div>
-            </div>
-        </div>
     </footer>
 
     <script>
@@ -1035,6 +1058,30 @@ Contact: nasmil2005@gmail.com
         }, observerOptions);
 
         document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('pointer-events-none', 'opacity-0');
+                mobileMenu.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.add('pointer-events-none', 'opacity-0');
+                mobileMenu.classList.remove('opacity-100');
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+        mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => toggleMenu(false));
+        });
     </script>
 </body>
 
